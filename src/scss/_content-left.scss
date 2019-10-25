@@ -1,0 +1,91 @@
+@import '_variable';
+
+.main {
+  color: $main-color-text;
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  line-height: 1.6;
+  font-weight: $main-font-weight;
+
+  p {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  &--head {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    p {
+      margin-right: 90px;
+      font-size: 13px;
+    }
+    &--item {
+      color: black;
+      cursor: pointer;
+    }
+
+    .item-a.active, .item-f.active, .item-k.active {
+      color: rgb(80, 66, 67);
+    }
+    .item-b.active, .item-e.active {
+      color: #125E46;
+    }
+    .item-c.active {
+      color: #EA9CB4;
+    }
+    .item-d.active {
+      color: #84C9CE;
+    }
+    .item-g.active, .item-i.active {
+      color: #87CEFA;
+    }
+    .item-h.active {
+      color: #84C9CE;
+    }
+    .item-j.active {
+      color: #FBAF00;
+    }
+  }
+
+  &--bottom {
+    display: flex;
+    flex-direction: row;
+    p {
+      margin-right: 62px;
+    }
+    &--item {
+      color: black;
+      cursor: pointer;
+    }
+    .item-l.active {
+      color: #121738;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $main-color-text;
+  margin-top: 120px;
+  margin-right: 60px;
+  padding-bottom: 45px;
+  &--column {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+    a {
+      color: $main-color-text;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 13px;
+    }
+  }
+}

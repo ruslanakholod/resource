@@ -1,0 +1,83 @@
+@import '_variable';
+@import '_content-left';
+@import '_content-right';
+
+@font-face {
+  font-family: 'Maison Neue';
+  src: url("../fonts/MaisonNeue-Light.ttf");
+}
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/HelveticaNeueCyr-Light.woff");
+}
+
+* {
+  font-family: 'MaisonNeue', Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-size: 100%;
+
+  .content--left {
+    position: fixed;
+    right: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 50;
+    padding: 45px 25px 0;
+    background: #fff;
+
+    &-wrapper {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: calc(100% + 17px);
+      overflow: auto;
+
+      & > div {
+        padding: 45px 25px 0;
+      }
+    }
+  }
+
+  .content--right {
+    background-color: #000000;
+    color: #ffffff;
+    width: 50%;
+    margin-left: auto;
+    position: relative;
+
+    &-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      overflow: auto;
+      width: calc(100% + 17px);
+
+      h1 {
+        padding: 10px 50px 45px 40px;
+      }
+    }
+  }
+}
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content--item {
+  position: absolute;
+  width: calc(100% + 17px);
+  height: 100%;
+  overflow: auto;
+}
